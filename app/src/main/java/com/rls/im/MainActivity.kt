@@ -9,19 +9,6 @@ import com.chat.android.im.config.IM
 import com.chat.android.im.config.UnifyDataConfig
 import com.chat.android.im.helper.IMCallback
 
-//proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//./gradlew clean build bintrayUpload -PbintrayUser=ruilisi -PbintrayKey=9decbccb9878764e906a018567daa734bedb2221 -PdryRun=false
-//./gradlew bintrayUpload -PbintrayUser=ruilisi -PbintrayKey=9decbccb9878764e906a018567daa734bedb2221 -PdryRun=false
-//apply plugin: 'com.novoda.bintray-release'
-//        publish {
-//        repoName = 'IM.Chat.Android.SDK'//远程仓库名字,不指明，默认是上传到maven
-//        userOrg = 'ruilisi'//bintray.com的用户名
-//        groupId = 'com.chat.android.im'//jcenter上的路径
-//        artifactId = 'im'//项目名称
-//        publishVersion = '0.0.1'//版本号
-//        desc = 'IM'//描述
-////    website = "https://github.com/novoda/${rootProject.name}"//github 地址
-//        }
 class MainActivity : AppCompatActivity() {
 
     private lateinit var server: EditText
