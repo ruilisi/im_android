@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="[room id]"
-            android:text="ZQTjpYHzu8etK5s5t" />
+            android:text="DrgQpHkLzqBxqe7WE" />
 
 
         <EditText
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="[user id]"
-            android:text="2i984iAtbfPpYA78X" />
+            android:text="sLJkjrj6FErXnpTBy" />
 
         <EditText
             android:id="@+id/user_token"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="[user token]"
-            android:text="2KWPRX_fZsCKHMY8duT9VigBleXR8o52Jsa130fNvll" />
+            android:text="R5bD3nafDKAU_XpJvuvZ8ZEaftDUGYIqmPeY9UN7HK5" />
 
 
         <Button
@@ -51,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
+            android:onClick="connect"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:text="connect" />
