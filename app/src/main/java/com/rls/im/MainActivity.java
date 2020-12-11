@@ -1,11 +1,9 @@
-package com.text.ruilisi_im;
+package com.rls.im;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.nbsp.materialfilepicker.MaterialFilePicker;
 
 
 //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -49,35 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-
-        openFile();
     }
-
-    private void openFile() {
-
-        new MaterialFilePicker()
-                // Pass a source of context. Can be:
-                //    .withActivity(Activity activity)
-                //    .withFragment(Fragment fragment)
-                //    .withSupportFragment(androidx.fragment.app.Fragment fragment)
-                .withActivity(this)
-                // With cross icon on the right side of toolbar for closing picker straight away
-                .withCloseMenu(true)
-                // Entry point path (user will start from it)
-//                .withPath(alarmsFolder.getAbsolutePath())
-                // Root path (user won't be able to come higher than it)
-//                .withRootPath(externalStorage.getAbsolutePath())
-                // Showing hidden files
-//                .withHiddenFiles(true)
-                // Want to choose only jpg images
-//                .withFilter(Pattern.compile(".*\\.(jpg|jpeg)$"))
-                // Don't apply filter to directories names
-//                .withFilterDirectories(false)
-//                .withTitle("Sample title")
-                .withRequestCode(100)
-                .start();
-    }
-
 
 //    private UnifyDataConfig getDataConfig() {
 //
@@ -88,6 +58,5 @@ public class MainActivity extends AppCompatActivity {
 //                .setUserToken("2KWPRX_fZsCKHMY8duT9VigBleXR8o52Jsa130fNvll")
 //                .build();
 //    }
-
 
 }

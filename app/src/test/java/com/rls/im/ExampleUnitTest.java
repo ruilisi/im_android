@@ -1,4 +1,4 @@
-package com.text.ruilisi_im;
+package com.rls.im;
 
 import org.junit.Test;
 

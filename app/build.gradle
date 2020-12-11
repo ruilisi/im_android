@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.text.ruilisi_im"
+        applicationId "com.rls.im"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -35,9 +35,6 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':Android.File.Picker')
-//    implementation project(path: ':IM.Chat.Android.SDK')
-//    implementation project(path: ':im')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
