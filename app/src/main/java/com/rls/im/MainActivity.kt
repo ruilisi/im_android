@@ -1,5 +1,6 @@
 package com.rls.im
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.chat.android.im.config.IM
 import com.chat.android.im.config.UnifyDataConfig
 import com.chat.android.im.helper.IMCallback
+import com.rls.pickfile.android.activity.FilePickerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         roomId = findViewById(R.id.room_id)
         userId = findViewById(R.id.user_id)
         userToken = findViewById(R.id.user_token)
+    }
+
+    fun filePick(view: View?) {
+        startActivity(Intent(this, FilePickerActivity::class.java))
     }
 
     fun connect(view: View?) {

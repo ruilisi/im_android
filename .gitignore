@@ -7,3 +7,4 @@ build/
 .DS_Store
 im.chat.android.sdk/
 upload_im.doc
+android.file.picker/
