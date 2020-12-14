@@ -1,7 +1,9 @@
 package com.rls.im
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -10,6 +12,7 @@ import com.chat.android.im.config.IM
 import com.chat.android.im.config.UnifyDataConfig
 import com.chat.android.im.helper.IMCallback
 import com.rls.pickfile.android.activity.FilePickerActivity
+import com.rls.pickfile.android.viewmodel.FilePickerViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun filePick(view: View?) {
-        startActivity(Intent(this, FilePickerActivity::class.java))
+        startActivityForResult(Intent(this, FilePickerActivity::class.java), 10)
     }
 
     fun connect(view: View?) {
@@ -78,5 +81,17 @@ class MainActivity : AppCompatActivity() {
     private fun showToas(text: String) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 10 && resultCode == Activity.RESULT_OK) {
+            data ?: throw IllegalArgumentException("data must not be null")
+            val path = data.getStringExtra(FilePickerViewModel.RESULT_FILE_PATH)
+            if (path != null) {
+                Log.d("Path: ", path)
+                Toast.makeText(this, "Picked file: $path", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }
