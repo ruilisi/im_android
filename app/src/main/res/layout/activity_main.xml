@@ -56,16 +56,6 @@
             android:paddingBottom="5dp"
             android:text="connect" />
 
-        <Button
-            android:id="@+id/file"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:onClick="filePick"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="file_picker" />
-
 
     </LinearLayout>
 

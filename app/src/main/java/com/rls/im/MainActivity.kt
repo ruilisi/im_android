@@ -34,10 +34,6 @@ class MainActivity : AppCompatActivity() {
         userToken = findViewById(R.id.user_token)
     }
 
-    fun filePick(view: View?) {
-        startActivityForResult(Intent(this, FilePickerActivity::class.java), 10)
-    }
-
     fun connect(view: View?) {
 
         if (server.text.trim().isEmpty()) {
@@ -83,15 +79,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 10 && resultCode == Activity.RESULT_OK) {
-            data ?: throw IllegalArgumentException("data must not be null")
-            val path = data.getStringExtra(FilePickerViewModel.RESULT_FILE_PATH)
-            if (path != null) {
-                Log.d("Path: ", path)
-                Toast.makeText(this, "Picked file: $path", Toast.LENGTH_LONG).show()
-            }
-        }
-    }
 }
